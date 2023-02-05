@@ -3,3 +3,7 @@
 *.terraform.lock.hcl
 .terraform/
 .terraform.tfstate.lock.info
+.gitignore
+(chapter4)*.tf
+(chapter5)*.tf
+*.pem
