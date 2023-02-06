@@ -6,3 +6,5 @@
 .gitignore
 *.pem
 *.txt
+(chapter4)*.tf
+(chapter5)*.tf
