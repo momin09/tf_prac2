@@ -1,4 +1,3 @@
-/*
 resource "aws_instance" "sample-ec2-web01" {
     tags = {
         Name = "sample-ec2-web01"
@@ -8,7 +7,7 @@ resource "aws_instance" "sample-ec2-web01" {
     instance_type = "t2.micro"
     subnet_id = aws_subnet.private01.id
 
-    key_name = aws_key_pair.exampleMomin-instance-key-pair.key_name
+    key_name = aws_key_pair.example-yeah-pair.key_name
 }
 
 resource "aws_instance" "sample-ec2-web02" {
@@ -21,6 +20,5 @@ resource "aws_instance" "sample-ec2-web02" {
     subnet_id = aws_subnet.private02.id
 
     associate_public_ip_address = true
-    key_name = aws_key_pair.exampleMomin-instance-key-pair.key_name
+    key_name = aws_key_pair.example-yeah-pair.key_name
 }
-*/
