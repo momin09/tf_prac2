@@ -19,7 +19,5 @@ resource "aws_instance" "sample-ec2-web02" {
     instance_type = "t2.micro"
     subnet_id = aws_subnet.private02.id
 
-    associate_public_ip_address = true
     key_name = aws_key_pair.example-yeah-pair.key_name
 }
-*/
