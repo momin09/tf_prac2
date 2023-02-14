@@ -22,13 +22,16 @@ resource "aws_db_subnet_group" "sample-db-subnet" {
 }
 
 resource "aws_db_instance" "sample-db" {
-  allocated_storage = 10
+  allocated_storage = 20
   parameter_group_name = aws_db_parameter_group.sample-db-pg.name
   option_group_name = aws_db_option_group.sample-db-og.name
   db_subnet_group_name = aws_db_subnet_group.sample-db-subnet.name
-  name = "sample-db"
+  vpc_security_group_ids = [aws_security_group.sample-sg-rds.id]
+
+  db_name = "sample_db"
   engine = "mysql"
   instance_class = "db.t2.micro"
+
 
   username = ""
   password = ""
